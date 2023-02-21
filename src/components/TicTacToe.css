@@ -1,0 +1,134 @@
+body {
+    background-color: #444;
+}
+
+.inactivity-overlay {
+    cursor: default !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black !important;
+    opacity: 0.5;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.inactivity-overlay:hover {
+    opacity: 0.9;
+}
+
+.inactivity-overlay:hover .icon {
+    color: white;
+    display: block;
+}
+
+.inactivity-overlay .icon {
+    color: #888;
+    font-size: 4rem;
+    transition: 0.3s;
+    box-shadow: 0 0 3px white;
+    padding: 7px;
+    border-radius: 1rem;
+    display: none;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+}
+
+.table > div {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    border-radius: 1rem;
+}
+
+.table .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.field {
+    background-color: #78bec5;
+    border-radius: 1rem;
+
+    padding: 0.9rem;
+    line-height: 0;
+    color: transparent;
+    transition: 0.3s;
+}
+
+.field:not(.active1):not(.active2):not(.winner) {
+    cursor: pointer;
+}
+
+.field:hover, .field.active1, .field.active2 {
+    background-color: #262934;
+    color: #8b8e96;
+}
+.field:hover .icon, .field.active1 .icon, .field.active2 .icon {
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.field .icon {
+    font-size: 2.5rem;
+}
+
+.field.active1 {
+    color: white;
+    background-color: #dc685a;
+}
+
+.field.active2 {
+    color: white;
+    background-color: #ecaf4f;
+}
+
+.field.drawn {
+    color: white;
+    background-color: #262934;
+}
+
+.winner {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99;
+}
+
+
+.winner:hover {
+    opacity: 0.8;
+}
+
+.winner.field .icon {
+    font-size: 6rem;
+}
