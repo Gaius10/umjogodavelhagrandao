@@ -1,5 +1,5 @@
 import { useState } from "react";
-import createGame from "../contexts/Game";
+import createGame from "./GameContext";
 import { IoIosBowtie } from 'react-icons/io'
 
 export default function useGame(gameId, playHandler, nextPlayer) {

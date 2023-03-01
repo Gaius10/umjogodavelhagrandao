@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { IoIosBowtie } from "react-icons/io";
-import useGame from "./useGame";
+import useGame from "../Game/useGame";
 
-export default function useBundle() {
+export default function useGameBundle() {
     const [bundle, setBundle] = useState({ moves: [] });
 
     function playHandler(move, game) {

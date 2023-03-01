@@ -1,13 +1,12 @@
 import { createContext } from "react";
-import useGame from "./hooks/useGame";
-import { TicTacToe } from "./components/TicTacToe";
+import { GameView } from './GameView';
 
 export default function Game({ game }) {
     const GameContext = createContext();
 
     return (
         <GameContext.Provider value={game}>
-            <TicTacToe context={GameContext} />
+            <GameView context={GameContext} />
         </GameContext.Provider>
     );
 }

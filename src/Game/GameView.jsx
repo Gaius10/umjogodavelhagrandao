@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { GiPadlock } from 'react-icons/gi';
-import './TicTacToe.css'
+import './GameView.css'
 
-export function TicTacToe({ context }) {
+export function GameView({ context }) {
     const game = useContext(context);
 
-    const gameView = <GameView game={game} />
+    const gameView = <GameTableView game={game} />
     const winnerView = <WinnerView winner={game.winner()} game={game} />
 
     return (
@@ -19,7 +19,7 @@ export function TicTacToe({ context }) {
     );
 }
 
-function GameView({ game }) {
+function GameTableView({ game }) {
     return <>
         <div className="row">
             <Field cellIndex={0} game={game} />

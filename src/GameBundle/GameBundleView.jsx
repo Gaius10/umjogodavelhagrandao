@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import './TicTacToeBundle.css'
-import Game from "../Game";
+import './GameBundleView.css'
+import Game from "../Game/Game";
 
-export function TicTacToeBundle({ context }) {
+export function GameBundleView({ context }) {
     const bundle = useContext(context);
 
     console.log(bundle);
